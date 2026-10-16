@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio académico de ejemplo desarrollado con Bulma CSS.">
+    <title>Tarea Bulma | Mi sitio web</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background: #f7f9fc; }
+        .hero-principal {
+            background: linear-gradient(120deg, rgba(13, 45, 77, .88), rgba(20, 108, 148, .72)),
+                        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=85") center/cover;
+        }
+        .seccion { padding: 4rem 1.5rem; }
+        .tarjeta-servicio { height: 100%; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+        .tarjeta-servicio:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(20, 45, 70, .13); }
+        .imagen-servicio { width: 100%; height: 210px; object-fit: cover; display: block; }
+        .imagen-proyecto { width: 100%; max-height: 360px; object-fit: cover; border-radius: 12px; }
+        .pie-pagina { background-color: #153b63; }
+        .marca { letter-spacing: .3px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar is-white" role="navigation" aria-label="menú principal">
+            <div class="navbar-brand">
+                <a class="navbar-item has-text-weight-bold is-size-4 marca" href="#inicio">Tarea Bulma</a>
+                <a role="button" class="navbar-burger" aria-label="Abrir menú"
+                   aria-expanded="false" data-target="menuPrincipal">
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span><span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="menuPrincipal" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#inicio">Inicio</a>
+                    <a class="navbar-item" href="#servicios">Servicios</a>
+                    <a class="navbar-item" href="#nosotros">Nosotros</a>
+                    <a class="navbar-item" href="#contacto">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero-principal is-medium" id="inicio">
+            <div class="hero-body">
+                <div class="container">
+                    <span class="tag is-warning mb-4">Proyecto académico</span>
+                    <h1 class="title is-1 has-text-white">Bienvenido a Tarea Bulma</h1>
+                    <p class="subtitle has-text-white mt-4">
+                        Un sitio web sencillo, moderno y adaptable desarrollado con Bulma CSS.
+                    </p>
+                    <div class="buttons mt-5">
+                        <a class="button is-primary" href="#servicios">Conocer más</a>
+                        <a class="button is-outlined is-white" href="#contacto">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section pb-0">
+            <div class="container">
+                <div class="notification is-info is-light" id="aviso">
+                    <button class="delete" aria-label="Cerrar aviso"></button>
+                    <strong>¡Hola!</strong> Esta página utiliza componentes del framework Bulma.
+                </div>
+            </div>
+        </section>
+
+        <section class="section seccion" id="servicios">
+            <div class="container">
+                <div class="has-text-centered mb-6">
+                    <p class="has-text-primary has-text-weight-semibold is-uppercase is-size-7">Nuestros servicios</p>
+                    <h2 class="title is-2 mt-2">Soluciones tecnológicas</h2>
+                    <p class="subtitle is-6">Ejemplos de contenido organizado con Bulma.</p>
+                </div>
+
+                <div class="columns is-multiline">
+                    <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                        <article class="card tarjeta-servicio">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img class="imagen-servicio"
+                                         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85"
+                                         alt="Computadora portátil con código de programación en pantalla" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="title is-4">Desarrollo web</h3>
+                                <p>Creación de sitios web modernos, atractivos y adaptables a cualquier dispositivo.</p>
+                                <a class="button is-link mt-4" href="#nosotros">Ver más</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                        <article class="card tarjeta-servicio">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img class="imagen-servicio"
+                                         src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85"
+                                         alt="Persona utilizando dispositivos tecnológicos" loading="lazy"
+                                         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85';">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="title is-4">Diseño adaptable</h3>
+                                <p>Interfaces optimizadas para computadoras, tabletas y teléfonos móviles.</p>
+                                <a class="button is-info mt-4" href="#nosotros">Ver más</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                        <article class="card tarjeta-servicio">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img class="imagen-servicio"
+                                         src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=85"
+                                         alt="Equipo trabajando con computadoras y herramientas tecnológicas" loading="lazy">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="title is-4">Herramientas modernas</h3>
+                                <p>Uso de componentes de Bulma para crear un diseño simple, limpio y funcional.</p>
+                                <a class="button is-success mt-4" href="#nosotros">Ver más</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section seccion has-background-white" id="nosotros">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-half">
+                        <span class="tag is-primary is-light mb-3">Sobre el proyecto</span>
+                        <h2 class="title is-2">¿Qué es Tarea Bulma?</h2>
+                        <p class="mb-4">
+                            Tarea Bulma es un sitio web académico creado para practicar el uso
+                            del framework Bulma. La página combina navegación, columnas,
+                            tarjetas, botones y formularios.
+                        </p>
+                        <p class="mb-5">
+                            Bulma proporciona clases CSS listas para utilizar, lo que facilita
+                            la creación de interfaces claras y adaptables a diferentes pantallas.
+                        </p>
+                        <button class="button is-primary" id="btnInformacion" type="button">Más información</button>
+                        <div id="informacionExtra" class="notification is-success is-light mt-4 is-hidden">
+                            Este proyecto utiliza HTML para la estructura, Bulma para los estilos
+                            y JavaScript para algunas interacciones.
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <img class="imagen-proyecto"
+                             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85"
+                             alt="Espacio de trabajo moderno con computadoras y escritorio" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section seccion" id="contacto">
+            <div class="container">
+                <div class="has-text-centered mb-5">
+                    <h2 class="title is-2">Contáctanos</h2>
+                    <p class="subtitle is-6">Formulario de ejemplo con elementos de Bulma.</p>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-12-mobile is-8-tablet is-6-desktop">
+                        <form class="box" id="formularioContacto">
+                            <div class="field">
+                                <label class="label" for="nombre">Nombre</label>
+                                <div class="control">
+                                    <input class="input" id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label" for="correo">Correo electrónico</label>
+                                <div class="control">
+                                    <input class="input" id="correo" name="correo" type="email" placeholder="nombre@ejemplo.com" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label" for="tema">Tema</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="tema" name="tema" required>
+                                            <option value="">Selecciona una opción</option>
+                                            <option>Información general</option>
+                                            <option>Diseño web</option>
+                                            <option>Otro tema</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="label" for="mensaje">Mensaje</label>
+                                <div class="control">
+                                    <textarea class="textarea" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label class="checkbox">
+                                    <input type="checkbox" required>
+                                    Confirmo que este es un formulario de demostración.
+                                </label>
+                            </div>
+                            <div class="field is-grouped">
+                                <div class="control"><button class="button is-primary" type="submit">Enviar</button></div>
+                                <div class="control"><button class="button is-light" type="reset">Limpiar</button></div>
+                            </div>
+                            <div id="respuestaFormulario" class="mt-4" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer pie-pagina">
+        <div class="content has-text-centered has-text-white">
+            <p class="title is-4 has-text-white">Tarea Bulma</p>
+            <p>Mi sitio web creado con Bulma CSS.</p>
+            <p class="is-size-7">© 2026 Tarea Bulma | Proyecto académico</p>
+            <a class="has-text-white" href="#inicio">Volver al inicio ↑</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".navbar-burger").forEach(function (burger) {
+                burger.addEventListener("click", function () {
+                    const menu = document.getElementById(burger.dataset.target);
+                    const activo = burger.classList.toggle("is-active");
+                    menu.classList.toggle("is-active");
+                    burger.setAttribute("aria-expanded", activo ? "true" : "false");
+                });
+            });
+
+            document.querySelector("#aviso .delete").addEventListener("click", function () {
+                document.getElementById("aviso").remove();
+            });
+
+            document.getElementById("btnInformacion").addEventListener("click", function () {
+                document.getElementById("informacionExtra").classList.toggle("is-hidden");
+            });
+
+            document.getElementById("formularioContacto").addEventListener("submit", function (evento) {
+                evento.preventDefault();
+                document.getElementById("respuestaFormulario").innerHTML =
+                    '<div class="notification is-success is-light">Formulario completado correctamente. Esta demostración no envía datos a un servidor.</div>';
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
